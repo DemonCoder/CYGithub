@@ -4,6 +4,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import android.widget.Toast
 import client.yalantis.com.githubclient.model.Repository
+import com.flying.xiaopo.poishuhui_kotlin.toast
 import com.github.R
 import com.github.base.BaseFragment
 import com.github.log.LogUtil
@@ -56,10 +57,7 @@ class FaceFragment : BaseFragment<RepositoriesContract.View, RepositoriesPresent
      */
     private fun initXRecyclerview() {
         mAdapter = GitHubListAdapter(ArrayList<Repository>(), {
-
-
-            LogUtil.d("abc","startActivity!!!!!")
-
+            mContext?.toast(it.name)
             startActivity(RepositoryDetailActivity.newIntent(activity, it.html_url))
         })
         xrecyclerview.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
