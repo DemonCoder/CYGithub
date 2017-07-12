@@ -1,11 +1,7 @@
 package com.github.ui.activity
 
-import android.os.Bundle
-import android.support.design.widget.BottomNavigationView
-import android.view.MenuItem
 import com.github.R
 import com.github.base.SimpleActivity
-import com.github.log.LogUtil
 import com.github.ui.fragment.FaceFragment
 import com.github.ui.fragment.LampFragment
 import com.github.ui.fragment.WeatherFragment
